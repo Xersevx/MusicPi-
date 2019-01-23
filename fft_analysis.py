@@ -6,12 +6,19 @@ import glob
 flute_notes = glob.glob('*.wav')
 
 def get_fmphi(fs,note):
-    ''' returns frequency components '''
-    threshold  = int()
-    signal_fft = np.fft.fft(note)
-    abs_fft = abs(signal_fft)
-    uyuy
-    pass
+
+    
+        threshold  = 0.5e8
+        signal_fft = np.fft.fft(note)
+        abs_fft = abs(signal_fft)
+        output = np.zeros_like(abs_fft)
+
+        for i, x in enumerate(abs_fft):
+                if x > threshold :
+                        output[i]  = signal_fft[i]
+        return [fs, np.fft.ifft(output)]
+    
+
 
 
 def do_stuff(notes):
