@@ -10,7 +10,7 @@ def get_fmphi(fs,note):
     threshold  = int()
     signal_fft = np.fft.fft(note)
     abs_fft = abs(signal_fft)
-    
+    uyuy
     pass
 
 
